@@ -1,0 +1,8 @@
+Tabela:
+CREATE TABLE [dbo].[Students] (
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [Name]        NVARCHAR (50) NOT NULL,
+    [Subname]     NVARCHAR (50) NOT NULL,
+    [IndexNumber] NVARCHAR (10) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
