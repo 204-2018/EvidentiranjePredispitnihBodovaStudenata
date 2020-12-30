@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class ListStudents : Form
+    public partial class Form1 : Form
     {
-        public ListStudents()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void ListStudents_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
