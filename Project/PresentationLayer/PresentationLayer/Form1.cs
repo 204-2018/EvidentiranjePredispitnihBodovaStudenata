@@ -22,13 +22,10 @@ namespace PresentationLayer
             string userName, pass;
             userName = textBoxUserName.Text;
             pass = textBoxPassword.Text;
-            if ((userName == "administrator1" && pass == "password1") || (userName == "administrator2" && pass == "password2") ||
-                (userName == "administrator3" && pass == "password3"))
+            if ((userName == "admin1" && pass == "password1") || (userName == "admin2" && pass == "password2") ||
+                (userName == "admin3" && pass == "password3"))
             {
                 MessageBox.Show("Success");
-                FormStudents formStudents = new FormStudents();
-                formStudents.Show();
-
             }
             else
             {
@@ -47,11 +44,11 @@ namespace PresentationLayer
         {
             if (checkBoxHide.Checked)
             {
-                textBoxPassword.UseSystemPasswordChar = false;
+                textBoxPassword.UseSystemPasswordChar = true;
             }
             else
             {
-                textBoxPassword.UseSystemPasswordChar = true;
+                textBoxPassword.UseSystemPasswordChar = false;
 
             }
         }
