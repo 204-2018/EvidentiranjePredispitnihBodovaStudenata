@@ -26,6 +26,8 @@ namespace PresentationLayer
                 (userName == "admin3" && pass == "password3"))
             {
                 MessageBox.Show("Success");
+                FormStudents1 formStudents1 = new FormStudents1();
+                formStudents1.Show();
             }
             else
             {
