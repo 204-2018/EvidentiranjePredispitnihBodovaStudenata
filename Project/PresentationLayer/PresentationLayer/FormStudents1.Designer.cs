@@ -33,7 +33,6 @@ namespace PresentationLayer
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelName = new System.Windows.Forms.Label();
             this.labelHomework = new System.Windows.Forms.Label();
             this.labelSeminaryWork = new System.Windows.Forms.Label();
@@ -55,8 +54,10 @@ namespace PresentationLayer
             this.buttonDelete = new System.Windows.Forms.Button();
             this.labelIdNew = new System.Windows.Forms.Label();
             this.textBoxIdNew = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listBoxStudents = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,9 +67,9 @@ namespace PresentationLayer
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(28, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 31);
+            this.label1.Size = new System.Drawing.Size(355, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "EVIDENCIJA STUDENATA";
+            this.label1.Text = "RECORDING STUDENTS";
             // 
             // label2
             // 
@@ -76,9 +77,9 @@ namespace PresentationLayer
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(750, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(330, 20);
+            this.label2.Size = new System.Drawing.Size(325, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "PREDMET: SOFTVERSKO INZENJERSTVO";
+            this.label2.Text = "SUBJECT: SOFTVERSKO INZENJERSTVO";
             // 
             // label3
             // 
@@ -86,17 +87,9 @@ namespace PresentationLayer
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(807, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(273, 20);
+            this.label3.Size = new System.Drawing.Size(283, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "PROFESOR: MARIJA BLAGOJEVIC";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 391);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1046, 269);
-            this.dataGridView1.TabIndex = 3;
+            this.label3.Text = "PROFFESOR: MARIJA BLAGOJEVIC";
             // 
             // labelName
             // 
@@ -248,6 +241,7 @@ namespace PresentationLayer
             this.buttonUpdate.TabIndex = 20;
             this.buttonUpdate.Text = "UPDATE";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonShow
             // 
@@ -258,6 +252,7 @@ namespace PresentationLayer
             this.buttonShow.TabIndex = 21;
             this.buttonShow.Text = "SHOW";
             this.buttonShow.UseVisualStyleBackColor = true;
+            this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
             // buttonDelete
             // 
@@ -268,6 +263,7 @@ namespace PresentationLayer
             this.buttonDelete.TabIndex = 22;
             this.buttonDelete.Text = "DELETE";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // labelIdNew
             // 
@@ -286,11 +282,30 @@ namespace PresentationLayer
             this.textBoxIdNew.Size = new System.Drawing.Size(99, 20);
             this.textBoxIdNew.TabIndex = 24;
             // 
+            // listBoxStudents
+            // 
+            this.listBoxStudents.FormattingEnabled = true;
+            this.listBoxStudents.Location = new System.Drawing.Point(34, 595);
+            this.listBoxStudents.Name = "listBoxStudents";
+            this.listBoxStudents.Size = new System.Drawing.Size(1046, 56);
+            this.listBoxStudents.TabIndex = 25;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 419);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1041, 164);
+            this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // FormStudents1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 672);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listBoxStudents);
             this.Controls.Add(this.textBoxIdNew);
             this.Controls.Add(this.labelIdNew);
             this.Controls.Add(this.buttonDelete);
@@ -312,14 +327,14 @@ namespace PresentationLayer
             this.Controls.Add(this.labelSeminaryWork);
             this.Controls.Add(this.labelHomework);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormStudents1";
             this.Text = "FormStudents1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormStudents1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +345,6 @@ namespace PresentationLayer
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelHomework;
         private System.Windows.Forms.Label labelSeminaryWork;
@@ -352,5 +366,7 @@ namespace PresentationLayer
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label labelIdNew;
         private System.Windows.Forms.TextBox textBoxIdNew;
+        private System.Windows.Forms.ListBox listBoxStudents;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
