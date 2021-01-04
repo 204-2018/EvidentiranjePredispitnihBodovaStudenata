@@ -67,22 +67,6 @@ namespace DataAccessLayer
                 return result;
             }
         }
-
-        public int Delete(Student s)
-        {
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "DELETE FROM Students WHERE Id=1";
-
-                int result = sqlCommand.ExecuteNonQuery();
-                return result;
-            }
-        }
-
-
         public int Delete1(Student s, int idNew)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))

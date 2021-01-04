@@ -40,14 +40,7 @@ namespace BusinessLayer
             }
             return false;
         }
-        public bool DeleteStudent(Student s)
-        {
-            if (this.studentRepository.Delete(s) > 0)
-            {
-                return true;
-            }
-            return false;
-        }
+
         public bool DeleteStudent1(Student s, int idNew)
         {
             if (this.studentRepository.Delete1(s, idNew) > 0)

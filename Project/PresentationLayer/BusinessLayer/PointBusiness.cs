@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using DataAccessLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace BusinessLayer
 
         public readonly PointRepository pointRepository;
 
-        public StudentBusiness()
+        public PointBusiness()
         {
             
             this.pointRepository = new PointRepository();
@@ -20,40 +21,32 @@ namespace BusinessLayer
             
         }
 
-        public List<PreexeminationPoint> GetPoints()
+        public List<PreexeminationPoints> GetPointss()
         {
-            return this.pointRepository.GetPoint();
+            return this.pointRepository.GetPoints();
         }
 
-        public bool InsertPoint(PreexeminationPoint p)
+        public bool InsertPoints(PreexeminationPoints p)
         {
-            if (this.pointRepository.Insert(p) > 0)
+            if (this.pointRepository.InsertPoint(p) > 0)
             {
                 return true;
             }
             return false;
         }
 
-        public bool UpdatePoint(PreexeminationPoint p)
+        public bool UpdatePoints(PreexeminationPoints p)
         {
-            if (this.pointRepository.Update(p) > 0)
-            {
-                return true;
-            }
-            return false;
-        }
-        public bool DeletePoint(PreexeminationPoint p)
-        {
-            if (this.pointRepository.Delete(p) > 0)
+            if (this.pointRepository.UpdatePoint(p) > 0)
             {
                 return true;
             }
             return false;
         }
        
-        public bool DeletePoint1(Point p, int idNew)
+        public bool DeletePoints1(PreexeminationPoints p, int idNew)
         {
-            if (this.pointtRepository.Delete1(p, idNew) > 0)
+            if (this.pointRepository.DeletePoint1(p, idNew) > 0)
             {
                 return true;
             }
