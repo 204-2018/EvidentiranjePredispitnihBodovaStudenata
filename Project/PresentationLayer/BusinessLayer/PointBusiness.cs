@@ -16,6 +16,7 @@ namespace BusinessLayer
         {
             
             this.pointRepository = new PointRepository();
+
             
         }
 
