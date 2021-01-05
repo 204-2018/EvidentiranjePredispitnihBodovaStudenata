@@ -30,7 +30,10 @@ namespace DataAccessLayer
                     s.Name = sqlDataReader.GetString(1);
                     s.Surname = sqlDataReader.GetString(2);
                     s.IndexNumber = sqlDataReader.GetString(3);
-
+                    s.Colloquium = sqlDataReader.GetInt32(4);
+                    s.SeminaryWork = sqlDataReader.GetInt32(5);
+                    s.Homework = sqlDataReader.GetInt32(6);
+                    s.Activity = sqlDataReader.GetInt32(7);
                     students.Add(s);
 
                 }
@@ -46,7 +49,7 @@ namespace DataAccessLayer
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = string.Format("INSERT INTO Students VALUES({0}, '{1}','{2}','{3}')", s.Id, s.Name, s.Surname, s.IndexNumber);
+                sqlCommand.CommandText = string.Format("INSERT INTO Students VALUES({0}, '{1}','{2}','{3}',{4},{5},{6},{7})", s.Id, s.Name, s.Surname, s.IndexNumber,s.Colloquium,s.SeminaryWork,s.Homework,s.Activity);
 
                 int result = sqlCommand.ExecuteNonQuery();
                 return result;
@@ -61,7 +64,7 @@ namespace DataAccessLayer
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "UPDATE Students SET Homework=5 WHERE Id=1";
+                sqlCommand.CommandText = "UPDATE Students  SET Colloquium=20 WHERE Id=26";
 
                 int result = sqlCommand.ExecuteNonQuery();
                 return result;
