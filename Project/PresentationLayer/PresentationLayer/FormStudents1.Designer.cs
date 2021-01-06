@@ -56,6 +56,10 @@ namespace PresentationLayer
             this.textBoxIdNew = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.listBoxLaidColl = new System.Windows.Forms.ListBox();
+            this.textBoxiD = new System.Windows.Forms.TextBox();
+            this.labeliD = new System.Windows.Forms.Label();
+            this.labellaidColl = new System.Windows.Forms.Label();
+            this.buttonView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +99,7 @@ namespace PresentationLayer
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(31, 117);
+            this.labelName.Location = new System.Drawing.Point(30, 156);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(50, 16);
             this.labelName.TabIndex = 4;
@@ -105,7 +109,7 @@ namespace PresentationLayer
             // 
             this.labelHomework.AutoSize = true;
             this.labelHomework.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHomework.Location = new System.Drawing.Point(444, 217);
+            this.labelHomework.Location = new System.Drawing.Point(407, 192);
             this.labelHomework.Name = "labelHomework";
             this.labelHomework.Size = new System.Drawing.Size(92, 16);
             this.labelHomework.TabIndex = 5;
@@ -115,7 +119,7 @@ namespace PresentationLayer
             // 
             this.labelSeminaryWork.AutoSize = true;
             this.labelSeminaryWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSeminaryWork.Location = new System.Drawing.Point(444, 170);
+            this.labelSeminaryWork.Location = new System.Drawing.Point(407, 156);
             this.labelSeminaryWork.Name = "labelSeminaryWork";
             this.labelSeminaryWork.Size = new System.Drawing.Size(125, 16);
             this.labelSeminaryWork.TabIndex = 6;
@@ -125,7 +129,7 @@ namespace PresentationLayer
             // 
             this.labelColloquium.AutoSize = true;
             this.labelColloquium.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColloquium.Location = new System.Drawing.Point(447, 115);
+            this.labelColloquium.Location = new System.Drawing.Point(410, 115);
             this.labelColloquium.Name = "labelColloquium";
             this.labelColloquium.Size = new System.Drawing.Size(98, 16);
             this.labelColloquium.TabIndex = 7;
@@ -136,7 +140,7 @@ namespace PresentationLayer
             // 
             this.labelIndexNumber.AutoSize = true;
             this.labelIndexNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIndexNumber.Location = new System.Drawing.Point(31, 211);
+            this.labelIndexNumber.Location = new System.Drawing.Point(30, 229);
             this.labelIndexNumber.Name = "labelIndexNumber";
             this.labelIndexNumber.Size = new System.Drawing.Size(113, 16);
             this.labelIndexNumber.TabIndex = 8;
@@ -146,7 +150,7 @@ namespace PresentationLayer
             // 
             this.labelSurname.AutoSize = true;
             this.labelSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSurname.Location = new System.Drawing.Point(31, 164);
+            this.labelSurname.Location = new System.Drawing.Point(30, 192);
             this.labelSurname.Name = "labelSurname";
             this.labelSurname.Size = new System.Drawing.Size(79, 16);
             this.labelSurname.TabIndex = 9;
@@ -157,7 +161,7 @@ namespace PresentationLayer
             // 
             this.labelActivity.AutoSize = true;
             this.labelActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActivity.Location = new System.Drawing.Point(447, 266);
+            this.labelActivity.Location = new System.Drawing.Point(410, 229);
             this.labelActivity.Name = "labelActivity";
             this.labelActivity.Size = new System.Drawing.Size(71, 16);
             this.labelActivity.TabIndex = 10;
@@ -165,49 +169,49 @@ namespace PresentationLayer
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(165, 116);
+            this.textBoxName.Location = new System.Drawing.Point(164, 155);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(147, 20);
             this.textBoxName.TabIndex = 11;
             // 
             // textBoxSurname
             // 
-            this.textBoxSurname.Location = new System.Drawing.Point(165, 163);
+            this.textBoxSurname.Location = new System.Drawing.Point(164, 191);
             this.textBoxSurname.Name = "textBoxSurname";
             this.textBoxSurname.Size = new System.Drawing.Size(147, 20);
             this.textBoxSurname.TabIndex = 12;
             // 
             // textBoxIndexNumber
             // 
-            this.textBoxIndexNumber.Location = new System.Drawing.Point(165, 210);
+            this.textBoxIndexNumber.Location = new System.Drawing.Point(164, 228);
             this.textBoxIndexNumber.Name = "textBoxIndexNumber";
             this.textBoxIndexNumber.Size = new System.Drawing.Size(147, 20);
             this.textBoxIndexNumber.TabIndex = 13;
             // 
             // textBoxColloquium
             // 
-            this.textBoxColloquium.Location = new System.Drawing.Point(584, 112);
+            this.textBoxColloquium.Location = new System.Drawing.Point(547, 112);
             this.textBoxColloquium.Name = "textBoxColloquium";
             this.textBoxColloquium.Size = new System.Drawing.Size(147, 20);
             this.textBoxColloquium.TabIndex = 14;
             // 
             // textBoxSeminaryWork
             // 
-            this.textBoxSeminaryWork.Location = new System.Drawing.Point(584, 170);
+            this.textBoxSeminaryWork.Location = new System.Drawing.Point(547, 156);
             this.textBoxSeminaryWork.Name = "textBoxSeminaryWork";
             this.textBoxSeminaryWork.Size = new System.Drawing.Size(147, 20);
             this.textBoxSeminaryWork.TabIndex = 15;
             // 
             // textBoxHomework
             // 
-            this.textBoxHomework.Location = new System.Drawing.Point(584, 217);
+            this.textBoxHomework.Location = new System.Drawing.Point(547, 192);
             this.textBoxHomework.Name = "textBoxHomework";
             this.textBoxHomework.Size = new System.Drawing.Size(147, 20);
             this.textBoxHomework.TabIndex = 16;
             // 
             // textBoxActivity
             // 
-            this.textBoxActivity.Location = new System.Drawing.Point(584, 266);
+            this.textBoxActivity.Location = new System.Drawing.Point(547, 229);
             this.textBoxActivity.Name = "textBoxActivity";
             this.textBoxActivity.Size = new System.Drawing.Size(147, 20);
             this.textBoxActivity.TabIndex = 17;
@@ -217,7 +221,7 @@ namespace PresentationLayer
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(804, 112);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(276, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(276, 181);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
@@ -225,9 +229,9 @@ namespace PresentationLayer
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.MediumTurquoise;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(66, 264);
+            this.buttonInsert.Location = new System.Drawing.Point(268, 257);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(204, 23);
+            this.buttonInsert.Size = new System.Drawing.Size(279, 36);
             this.buttonInsert.TabIndex = 19;
             this.buttonInsert.Text = "INSERT";
             this.buttonInsert.UseVisualStyleBackColor = false;
@@ -236,7 +240,7 @@ namespace PresentationLayer
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(447, 333);
+            this.buttonUpdate.Location = new System.Drawing.Point(299, 305);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(209, 23);
             this.buttonUpdate.TabIndex = 20;
@@ -247,9 +251,9 @@ namespace PresentationLayer
             // buttonShow
             // 
             this.buttonShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShow.Location = new System.Drawing.Point(66, 323);
+            this.buttonShow.Location = new System.Drawing.Point(33, 309);
             this.buttonShow.Name = "buttonShow";
-            this.buttonShow.Size = new System.Drawing.Size(204, 23);
+            this.buttonShow.Size = new System.Drawing.Size(209, 23);
             this.buttonShow.TabIndex = 21;
             this.buttonShow.Text = "SHOW";
             this.buttonShow.UseVisualStyleBackColor = true;
@@ -258,9 +262,9 @@ namespace PresentationLayer
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(804, 333);
+            this.buttonDelete.Location = new System.Drawing.Point(900, 309);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(204, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(175, 23);
             this.buttonDelete.TabIndex = 22;
             this.buttonDelete.Text = "DELETE";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -270,23 +274,23 @@ namespace PresentationLayer
             // 
             this.labelIdNew.AutoSize = true;
             this.labelIdNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdNew.Location = new System.Drawing.Point(801, 292);
+            this.labelIdNew.Location = new System.Drawing.Point(623, 312);
             this.labelIdNew.Name = "labelIdNew";
-            this.labelIdNew.Size = new System.Drawing.Size(59, 16);
+            this.labelIdNew.Size = new System.Drawing.Size(164, 16);
             this.labelIdNew.TabIndex = 23;
-            this.labelIdNew.Text = "ID NEW:";
+            this.labelIdNew.Text = "THE ID TO BE DELETED:";
             // 
             // textBoxIdNew
             // 
-            this.textBoxIdNew.Location = new System.Drawing.Point(896, 292);
+            this.textBoxIdNew.Location = new System.Drawing.Point(804, 311);
             this.textBoxIdNew.Name = "textBoxIdNew";
-            this.textBoxIdNew.Size = new System.Drawing.Size(99, 20);
+            this.textBoxIdNew.Size = new System.Drawing.Size(90, 20);
             this.textBoxIdNew.TabIndex = 24;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 381);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 361);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1041, 164);
             this.dataGridView1.TabIndex = 26;
@@ -295,17 +299,60 @@ namespace PresentationLayer
             // listBoxLaidColl
             // 
             this.listBoxLaidColl.FormattingEnabled = true;
-            this.listBoxLaidColl.Location = new System.Drawing.Point(34, 562);
+            this.listBoxLaidColl.Location = new System.Drawing.Point(415, 548);
             this.listBoxLaidColl.Name = "listBoxLaidColl";
-            this.listBoxLaidColl.Size = new System.Drawing.Size(1041, 69);
+            this.listBoxLaidColl.Size = new System.Drawing.Size(299, 108);
             this.listBoxLaidColl.TabIndex = 27;
             this.listBoxLaidColl.SelectedIndexChanged += new System.EventHandler(this.listBoxLaidColl_SelectedIndexChanged);
+            // 
+            // textBoxiD
+            // 
+            this.textBoxiD.Location = new System.Drawing.Point(164, 115);
+            this.textBoxiD.Name = "textBoxiD";
+            this.textBoxiD.Size = new System.Drawing.Size(147, 20);
+            this.textBoxiD.TabIndex = 29;
+            // 
+            // labeliD
+            // 
+            this.labeliD.AutoSize = true;
+            this.labeliD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeliD.Location = new System.Drawing.Point(30, 116);
+            this.labeliD.Name = "labeliD";
+            this.labeliD.Size = new System.Drawing.Size(24, 16);
+            this.labeliD.TabIndex = 28;
+            this.labeliD.Text = "ID:";
+            // 
+            // labellaidColl
+            // 
+            this.labellaidColl.AutoSize = true;
+            this.labellaidColl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellaidColl.Location = new System.Drawing.Point(31, 548);
+            this.labellaidColl.Name = "labellaidColl";
+            this.labellaidColl.Size = new System.Drawing.Size(378, 16);
+            this.labellaidColl.TabIndex = 30;
+            this.labellaidColl.Text = "REVIEW OF STUDENTS WHO PASSED THE COLLOQUIUM:";
+            // 
+            // buttonView
+            // 
+            this.buttonView.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.buttonView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonView.Location = new System.Drawing.Point(120, 583);
+            this.buttonView.Name = "buttonView";
+            this.buttonView.Size = new System.Drawing.Size(209, 38);
+            this.buttonView.TabIndex = 31;
+            this.buttonView.Text = "VIEW";
+            this.buttonView.UseVisualStyleBackColor = false;
+            this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
             // FormStudents1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 672);
+            this.Controls.Add(this.buttonView);
+            this.Controls.Add(this.labellaidColl);
+            this.Controls.Add(this.textBoxiD);
+            this.Controls.Add(this.labeliD);
             this.Controls.Add(this.listBoxLaidColl);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxIdNew);
@@ -370,5 +417,9 @@ namespace PresentationLayer
         private System.Windows.Forms.TextBox textBoxIdNew;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ListBox listBoxLaidColl;
+        private System.Windows.Forms.TextBox textBoxiD;
+        private System.Windows.Forms.Label labeliD;
+        private System.Windows.Forms.Label labellaidColl;
+        private System.Windows.Forms.Button buttonView;
     }
 }

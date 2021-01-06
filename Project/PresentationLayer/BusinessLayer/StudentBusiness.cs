@@ -41,10 +41,10 @@ namespace BusinessLayer
             return false;
         }
 
-        public bool DeleteStudent1(Student s)
+        public bool DeleteStudent1(int id)
         {
-            
-            if(this.studentRepository.Delete1(s)  > 0)
+
+            if (this.studentRepository.Delete1(id) > 0)
             {
 
                 return true;
@@ -57,7 +57,7 @@ namespace BusinessLayer
 
         }
 
-        public List<Student> LaidColl(int sem)
+        public List<Student> LaidColl()
         {
             return this.studentRepository.GetStudent().Where(s => s.Colloquium >= 10).ToList();
         }

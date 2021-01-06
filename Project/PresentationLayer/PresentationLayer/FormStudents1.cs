@@ -18,7 +18,9 @@ namespace PresentationLayer
         public readonly StudentBusiness studentBusiness;
 
         public FormStudents1()
+
         {
+            this.WindowState = FormWindowState.Maximized;
             this.studentBusiness = new StudentBusiness();
             InitializeComponent();
         }
@@ -73,9 +75,10 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            Student s = new Student();
+            int id = Convert.ToInt32(textBoxIdNew.Text);
 
-            if (this.studentBusiness.DeleteStudent1(s))
+
+            if (this.studentBusiness.DeleteStudent1(id))
             {
                 MessageBox.Show("Uspesno ste obrisali studenta!");
                 RefreshData();
@@ -94,6 +97,7 @@ namespace PresentationLayer
         private void buttonInsert_Click(object sender, EventArgs e)
         {
             Student s = new Student();
+            s.Id = Convert.ToInt32(textBoxiD.Text);
             s.Name = textBoxName.Text;
             s.Surname = textBoxSurname.Text;
             s.IndexNumber = textBoxIndexNumber.Text;
@@ -119,6 +123,16 @@ namespace PresentationLayer
         private void listBoxLaidColl_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+            List<Student> students = this.studentBusiness.LaidColl();
+
+            foreach (Student s in students)
+            {
+                listBoxLaidColl.Items.Add(s.Name + "  " + s.Surname + "  " + s.IndexNumber + " -  " + s.Colloquium  + " bodova" );
+            }
         }
     }
     }
