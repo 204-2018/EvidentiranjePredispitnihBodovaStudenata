@@ -14,9 +14,9 @@ namespace BusinessLayer
 
         public readonly StudentRepository studentRepository;
 
-        public StudentBusiness()
+        public StudentBusiness(IStudentRepository _studentRepository)
         {
-            this.studentRepository = new StudentRepository();
+            this.studentRepository = _studentRepository;
         }
 
         public List<Student> GetStudents()
