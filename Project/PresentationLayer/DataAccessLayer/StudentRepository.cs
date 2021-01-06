@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Models;
+using Shared.Interface.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -8,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class StudentRepository
+    public class StudentRepository : IStudentRepository
     {
+       
+
         public List<Student> GetStudent()
         {
             List<Student> students = new List<Student>();
@@ -84,5 +87,7 @@ namespace DataAccessLayer
                 return result;
             }
         }
+
+        
     }
 }

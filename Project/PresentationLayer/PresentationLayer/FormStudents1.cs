@@ -134,5 +134,18 @@ namespace PresentationLayer
                 listBoxLaidColl.Items.Add(s.Name + "  " + s.Surname + "  " + s.IndexNumber + " -  " + s.Colloquium  + " bodova" );
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            FormStudents1 formStudents1 = new FormStudents1();
+            formStudents1.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     }
