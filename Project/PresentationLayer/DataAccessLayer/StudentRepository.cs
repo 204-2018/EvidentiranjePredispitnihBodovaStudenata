@@ -49,7 +49,8 @@ namespace DataAccessLayer
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = string.Format("INSERT INTO Students VALUES({0}, '{1}','{2}','{3}',{4},{5},{6},{7})", s.Id, s.Name, s.Surname, s.IndexNumber,s.Colloquium,s.SeminaryWork,s.Homework,s.Activity);
+                sqlCommand.CommandText =string.Format("INSERT INTO Students VALUES ({0},'{1}','{2}','{3}',{4},{5},{6},{7})", s.Id, s.Name, s.Surname, s.IndexNumber, s.Colloquium,
+                    s.SeminaryWork, s.Homework, s.Activity);
 
                 int result = sqlCommand.ExecuteNonQuery();
                 return result;
@@ -64,20 +65,20 @@ namespace DataAccessLayer
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "UPDATE Students  SET Colloquium=20 WHERE Id=26";
+                sqlCommand.CommandText = "UPDATE Students  SET SeminaryWork=20 WHERE Id LIKE 26";
 
                 int result = sqlCommand.ExecuteNonQuery();
                 return result;
             }
         }
-        public int Delete1(Student s, int idNew)
+        public int Delete1(Student s)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "DELETE FROM Students WHERE Id=idNew";
+                sqlCommand.CommandText = "DELETE FROM Students WHERE Id=25";
 
                 int result = sqlCommand.ExecuteNonQuery();
                 return result;

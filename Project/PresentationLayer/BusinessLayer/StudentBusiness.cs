@@ -41,15 +41,25 @@ namespace BusinessLayer
             return false;
         }
 
-        public bool DeleteStudent1(Student s, int idNew)
+        public bool DeleteStudent1(Student s)
         {
-            if (this.studentRepository.Delete1(s, idNew) > 0)
+            
+            if(this.studentRepository.Delete1(s)  > 0)
             {
+
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
 
 
+        }
+
+        public List<Student> LaidColl(int sem)
+        {
+            return this.studentRepository.GetStudent().Where(s => s.Colloquium >= 10).ToList();
         }
     }
 }

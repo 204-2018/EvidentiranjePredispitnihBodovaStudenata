@@ -16,12 +16,10 @@ namespace PresentationLayer
 
     {
         public readonly StudentBusiness studentBusiness;
-        public  readonly PointBusiness pointBusiness;
 
         public FormStudents1()
         {
             this.studentBusiness = new StudentBusiness();
-            this.pointBusiness = new PointBusiness();
             InitializeComponent();
         }
 
@@ -38,62 +36,31 @@ namespace PresentationLayer
         private void FormStudents1_Load(object sender, EventArgs e)
         {
             RefreshData();
-            RefreshData1();
         }
         private void RefreshData()
         {
 
-            listBoxStudents.Items.Clear();
             List<Student> students = this.studentBusiness.GetStudents();
 
             foreach (Student s in students)
             {
-                listBoxStudents.Items.Add(s.Id + ". " + s.Name + "(" + s.IndexNumber + ")");
+              dataGridView1.DataSource = students;
+                    
             }
 
         }
-            private void RefreshData1()
-            {
-                List<PreexeminationPoints> points = this.pointBusiness.GetPointss();
-                listBoxStudents.Items.Clear();
-
-                foreach (PreexeminationPoints p in points)
-                {
-                    listBoxStudents.Items.Add(p.Colloquium + p.SeminaryWork + p.Homework + p.Activity);
-
-                }
-            }
+           
 
         private void buttonShow_Click(object sender, EventArgs e)
         {
-            Student s = new Student();
-            s.Name = textBoxName.Text;
-            s.Surname = textBoxSurname.Text;
-            s.IndexNumber = textBoxIndexNumber.Text;
-
-            PreexeminationPoints p = new PreexeminationPoints();
-            p.Colloquium = Convert.ToInt32(textBoxColloquim.Text);
-            p.SeminaryWork = Convert.ToInt32(textBoxSeminaryWork.Text);
-            p.Homework = Convert.ToInt32(textBoxHomework.Text);
-            p.Activity = Convert.ToInt32(textBoxActivity.Text);
-
-            if (this.studentBusiness.InsertStudent(s) && this.pointBusiness.InsertPoints(p))
-            {
-                RefreshData();
-                MessageBox.Show("Uspesno!");
-            }
-            else
-            {
-                MessageBox.Show("Greska, pokusajte ponovo!");
-            }
+            RefreshData();
 
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             Student s = new Student();
-            PreexeminationPoints p = new PreexeminationPoints();
-            if (this.studentBusiness.UpdateStudent(s) && (this.pointBusiness.UpdatePoints(p)))
+            if (this.studentBusiness.UpdateStudent(s))
             {
                 MessageBox.Show("Uspesno ste izmenili podatak studenta!");
                 RefreshData();
@@ -107,10 +74,8 @@ namespace PresentationLayer
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             Student s = new Student();
-            PreexeminationPoints p = new PreexeminationPoints();
 
-            int idNew= Convert.ToInt32(textBoxIdNew.Text);
-            if (this.studentBusiness.DeleteStudent1(s, idNew) && (this.pointBusiness.DeletePoints1(p, idNew)))
+            if (this.studentBusiness.DeleteStudent1(s))
             {
                 MessageBox.Show("Uspesno ste obrisali studenta!");
                 RefreshData();
@@ -122,6 +87,36 @@ namespace PresentationLayer
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void buttonInsert_Click(object sender, EventArgs e)
+        {
+            Student s = new Student();
+            s.Name = textBoxName.Text;
+            s.Surname = textBoxSurname.Text;
+            s.IndexNumber = textBoxIndexNumber.Text;
+            s.Colloquium = Convert.ToInt32(textBoxColloquium.Text);
+            s.SeminaryWork = Convert.ToInt32(textBoxSeminaryWork.Text);
+            s.Homework = Convert.ToInt32(textBoxHomework.Text);
+            s.Activity = Convert.ToInt32(textBoxActivity.Text);
+
+
+
+            if (this.studentBusiness.InsertStudent(s))
+            {
+                dataGridView1.DataSource = s;
+                RefreshData();
+                MessageBox.Show("Uspesno unet podatak!");
+            }
+            else
+            {
+                MessageBox.Show("Greska, pokusajte ponovo!");
+            }
+        }
+
+        private void listBoxLaidColl_SelectedIndexChanged(object sender, EventArgs e)
         {
             
         }

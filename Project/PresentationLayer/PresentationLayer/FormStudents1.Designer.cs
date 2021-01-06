@@ -36,14 +36,14 @@ namespace PresentationLayer
             this.labelName = new System.Windows.Forms.Label();
             this.labelHomework = new System.Windows.Forms.Label();
             this.labelSeminaryWork = new System.Windows.Forms.Label();
-            this.labelColloquim = new System.Windows.Forms.Label();
+            this.labelColloquium = new System.Windows.Forms.Label();
             this.labelIndexNumber = new System.Windows.Forms.Label();
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelActivity = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxIndexNumber = new System.Windows.Forms.TextBox();
-            this.textBoxColloquim = new System.Windows.Forms.TextBox();
+            this.textBoxColloquium = new System.Windows.Forms.TextBox();
             this.textBoxSeminaryWork = new System.Windows.Forms.TextBox();
             this.textBoxHomework = new System.Windows.Forms.TextBox();
             this.textBoxActivity = new System.Windows.Forms.TextBox();
@@ -54,8 +54,8 @@ namespace PresentationLayer
             this.buttonDelete = new System.Windows.Forms.Button();
             this.labelIdNew = new System.Windows.Forms.Label();
             this.textBoxIdNew = new System.Windows.Forms.TextBox();
-            this.listBoxStudents = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listBoxLaidColl = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +75,7 @@ namespace PresentationLayer
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(750, 41);
+            this.label2.Location = new System.Drawing.Point(765, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(325, 20);
             this.label2.TabIndex = 1;
@@ -117,20 +117,20 @@ namespace PresentationLayer
             this.labelSeminaryWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSeminaryWork.Location = new System.Drawing.Point(444, 170);
             this.labelSeminaryWork.Name = "labelSeminaryWork";
-            this.labelSeminaryWork.Size = new System.Drawing.Size(116, 16);
+            this.labelSeminaryWork.Size = new System.Drawing.Size(125, 16);
             this.labelSeminaryWork.TabIndex = 6;
-            this.labelSeminaryWork.Text = "SEMINRY WORK:";
+            this.labelSeminaryWork.Text = "SEMINARY WORK:";
             // 
-            // labelColloquim
+            // labelColloquium
             // 
-            this.labelColloquim.AutoSize = true;
-            this.labelColloquim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelColloquim.Location = new System.Drawing.Point(447, 115);
-            this.labelColloquim.Name = "labelColloquim";
-            this.labelColloquim.Size = new System.Drawing.Size(88, 16);
-            this.labelColloquim.TabIndex = 7;
-            this.labelColloquim.Text = "COLLOQUIM:";
-            this.labelColloquim.Click += new System.EventHandler(this.labelColloquim_Click);
+            this.labelColloquium.AutoSize = true;
+            this.labelColloquium.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelColloquium.Location = new System.Drawing.Point(447, 115);
+            this.labelColloquium.Name = "labelColloquium";
+            this.labelColloquium.Size = new System.Drawing.Size(98, 16);
+            this.labelColloquium.TabIndex = 7;
+            this.labelColloquium.Text = "COLLOQUIUM:";
+            this.labelColloquium.Click += new System.EventHandler(this.labelColloquim_Click);
             // 
             // labelIndexNumber
             // 
@@ -184,12 +184,12 @@ namespace PresentationLayer
             this.textBoxIndexNumber.Size = new System.Drawing.Size(147, 20);
             this.textBoxIndexNumber.TabIndex = 13;
             // 
-            // textBoxColloquim
+            // textBoxColloquium
             // 
-            this.textBoxColloquim.Location = new System.Drawing.Point(584, 112);
-            this.textBoxColloquim.Name = "textBoxColloquim";
-            this.textBoxColloquim.Size = new System.Drawing.Size(147, 20);
-            this.textBoxColloquim.TabIndex = 14;
+            this.textBoxColloquium.Location = new System.Drawing.Point(584, 112);
+            this.textBoxColloquium.Name = "textBoxColloquium";
+            this.textBoxColloquium.Size = new System.Drawing.Size(147, 20);
+            this.textBoxColloquium.TabIndex = 14;
             // 
             // textBoxSeminaryWork
             // 
@@ -225,12 +225,13 @@ namespace PresentationLayer
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.MediumTurquoise;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(76, 263);
+            this.buttonInsert.Location = new System.Drawing.Point(66, 264);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(204, 23);
             this.buttonInsert.TabIndex = 19;
             this.buttonInsert.Text = "INSERT";
             this.buttonInsert.UseVisualStyleBackColor = false;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonUpdate
             // 
@@ -246,7 +247,7 @@ namespace PresentationLayer
             // buttonShow
             // 
             this.buttonShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShow.Location = new System.Drawing.Point(34, 333);
+            this.buttonShow.Location = new System.Drawing.Point(66, 323);
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(204, 23);
             this.buttonShow.TabIndex = 21;
@@ -282,30 +283,31 @@ namespace PresentationLayer
             this.textBoxIdNew.Size = new System.Drawing.Size(99, 20);
             this.textBoxIdNew.TabIndex = 24;
             // 
-            // listBoxStudents
-            // 
-            this.listBoxStudents.FormattingEnabled = true;
-            this.listBoxStudents.Location = new System.Drawing.Point(34, 595);
-            this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new System.Drawing.Size(1046, 56);
-            this.listBoxStudents.TabIndex = 25;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 419);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 381);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1041, 164);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // listBoxLaidColl
+            // 
+            this.listBoxLaidColl.FormattingEnabled = true;
+            this.listBoxLaidColl.Location = new System.Drawing.Point(34, 562);
+            this.listBoxLaidColl.Name = "listBoxLaidColl";
+            this.listBoxLaidColl.Size = new System.Drawing.Size(1041, 69);
+            this.listBoxLaidColl.TabIndex = 27;
+            this.listBoxLaidColl.SelectedIndexChanged += new System.EventHandler(this.listBoxLaidColl_SelectedIndexChanged);
             // 
             // FormStudents1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 672);
+            this.Controls.Add(this.listBoxLaidColl);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.listBoxStudents);
             this.Controls.Add(this.textBoxIdNew);
             this.Controls.Add(this.labelIdNew);
             this.Controls.Add(this.buttonDelete);
@@ -316,14 +318,14 @@ namespace PresentationLayer
             this.Controls.Add(this.textBoxActivity);
             this.Controls.Add(this.textBoxHomework);
             this.Controls.Add(this.textBoxSeminaryWork);
-            this.Controls.Add(this.textBoxColloquim);
+            this.Controls.Add(this.textBoxColloquium);
             this.Controls.Add(this.textBoxIndexNumber);
             this.Controls.Add(this.textBoxSurname);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelActivity);
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.labelIndexNumber);
-            this.Controls.Add(this.labelColloquim);
+            this.Controls.Add(this.labelColloquium);
             this.Controls.Add(this.labelSeminaryWork);
             this.Controls.Add(this.labelHomework);
             this.Controls.Add(this.labelName);
@@ -348,14 +350,14 @@ namespace PresentationLayer
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelHomework;
         private System.Windows.Forms.Label labelSeminaryWork;
-        private System.Windows.Forms.Label labelColloquim;
+        private System.Windows.Forms.Label labelColloquium;
         private System.Windows.Forms.Label labelIndexNumber;
         private System.Windows.Forms.Label labelSurname;
         private System.Windows.Forms.Label labelActivity;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.TextBox textBoxIndexNumber;
-        private System.Windows.Forms.TextBox textBoxColloquim;
+        private System.Windows.Forms.TextBox textBoxColloquium;
         private System.Windows.Forms.TextBox textBoxSeminaryWork;
         private System.Windows.Forms.TextBox textBoxHomework;
         private System.Windows.Forms.TextBox textBoxActivity;
@@ -366,7 +368,7 @@ namespace PresentationLayer
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label labelIdNew;
         private System.Windows.Forms.TextBox textBoxIdNew;
-        private System.Windows.Forms.ListBox listBoxStudents;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox listBoxLaidColl;
     }
 }
