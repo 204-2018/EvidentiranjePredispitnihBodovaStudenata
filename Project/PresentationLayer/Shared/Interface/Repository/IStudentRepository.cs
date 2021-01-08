@@ -1,4 +1,4 @@
-﻿using DataAccessLayer.Models;
+﻿using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +13,5 @@ namespace Shared.Interface.Repository
         int Insert(Student s);
         int Update(Student s);
         int Delete1(int id);
-
-
-
-
     }
 }

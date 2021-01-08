@@ -1,28 +1,23 @@
-﻿using BusinessLayer;
-using DataAccessLayer.Models;
+﻿using Shared.Models;
+using Shared.Interface.Business;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace PresentationLayer
 {
     public partial class FormStudents1 : Form
 
     {
-        public readonly StudentBusiness studentBusiness;
+        public  readonly IStudentBusiness studentBusiness;
 
-        public FormStudents1()
+        public FormStudents1(IStudentBusiness _studentBusiness)
 
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.studentBusiness = new StudentBusiness();
+            this.studentBusiness = _studentBusiness;
             InitializeComponent();
+
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -43,7 +38,7 @@ namespace PresentationLayer
         {
 
             List<Student> students = this.studentBusiness.GetStudents();
-
+           
             foreach (Student s in students)
             {
               dataGridView1.DataSource = students;
@@ -66,6 +61,7 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Uspesno ste izmenili podatak studenta!");
                 RefreshData();
+
             }
             else
             {
@@ -82,6 +78,7 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Uspesno ste obrisali studenta!");
                 RefreshData();
+
             }
             else
             {
@@ -96,29 +93,34 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            Student s = new Student();
-            s.Id = Convert.ToInt32(textBoxiD.Text);
-            s.Name = textBoxName.Text;
-            s.Surname = textBoxSurname.Text;
-            s.IndexNumber = textBoxIndexNumber.Text;
-            s.Colloquium = Convert.ToInt32(textBoxColloquium.Text);
-            s.SeminaryWork = Convert.ToInt32(textBoxSeminaryWork.Text);
-            s.Homework = Convert.ToInt32(textBoxHomework.Text);
-            s.Activity = Convert.ToInt32(textBoxActivity.Text);
-
-
-
-            if (this.studentBusiness.InsertStudent(s))
+            if (!string.IsNullOrEmpty(textBoxName.Text) &&
+                !string.IsNullOrEmpty(textBoxSurname.Text) &&
+                !string.IsNullOrEmpty(textBoxIndexNumber.Text))
             {
-                dataGridView1.DataSource = s;
-                RefreshData();
-                MessageBox.Show("Uspesno unet podatak!");
-            }
-            else
-            {
-                MessageBox.Show("Greska, pokusajte ponovo!");
-            }
-        }
+                Student s = new Student();
+                s.Id = Convert.ToInt32(textBoxiD.Text);
+                s.Name = textBoxName.Text;
+                s.Surname = textBoxSurname.Text;
+                s.IndexNumber = textBoxIndexNumber.Text;
+                s.Colloquium = Convert.ToInt32(textBoxColloquium.Text);
+                s.SeminaryWork = Convert.ToInt32(textBoxSeminaryWork.Text);
+                s.Homework = Convert.ToInt32(textBoxHomework.Text);
+                s.Activity = Convert.ToInt32(textBoxActivity.Text);
+
+
+
+                if (this.studentBusiness.InsertStudent(s))
+                {
+
+                    dataGridView1.DataSource = s;
+                    RefreshData();
+                    MessageBox.Show("Uspesno unet podatak!");
+                }
+                else
+                {
+                    MessageBox.Show("Greska, pokusajte ponovo!");
+                }
+            } }
 
         private void listBoxLaidColl_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -135,17 +137,24 @@ namespace PresentationLayer
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.Show();
-            FormStudents1 formStudents1 = new FormStudents1();
-            formStudents1.Close();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Validation()
+        {
+            if (!string.IsNullOrEmpty(textBoxName.Text) &&
+                !string.IsNullOrEmpty(textBoxSurname.Text) &&
+                !string.IsNullOrEmpty(textBoxIndexNumber.Text))
+            {
+                buttonInsert.Enabled = true;
+            }
+            else
+            {
+                buttonInsert.Enabled = false;
+            }
         }
     }
     }

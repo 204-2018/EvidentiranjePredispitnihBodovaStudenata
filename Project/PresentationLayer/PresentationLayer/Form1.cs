@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Shared.Interface.Business;
+using System.Data.Entity;
+using DataAccessLayer;
+using System.Text.RegularExpressions;
 namespace PresentationLayer
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
-        }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        }
+        public void buttonLogin_Click(object sender, EventArgs e)
         {
             string userName, pass;
             userName = textBoxUserName.Text;
@@ -28,7 +33,8 @@ namespace PresentationLayer
                 MessageBox.Show("Success");
                 FormStudents1 formStudents1 = new FormStudents1();
                 formStudents1.Show();
-            }
+    }
+          
             else
             {
                 MessageBox.Show("Error Try again!");
@@ -36,13 +42,13 @@ namespace PresentationLayer
             }
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        public void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
-        private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
+        public void checkBoxHide_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxHide.Checked)
             {
@@ -53,6 +59,11 @@ namespace PresentationLayer
                 textBoxPassword.UseSystemPasswordChar = false;
 
             }
+        }
+
+        public void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

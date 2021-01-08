@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
-using DataAccessLayer.Models;
 using Shared.Interface.Business;
+using Shared.Interface.Repository;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,17 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class StudentBusiness : IBusinessRepository
+    public class StudentBusiness : IStudentBusiness
     {
 
-        public readonly StudentRepository studentRepository;
+        public readonly IStudentRepository studentRepository;
 
         public StudentBusiness(IStudentRepository _studentRepository)
         {
             this.studentRepository = _studentRepository;
         }
+
+       
 
         public List<Student> GetStudents()
         {
@@ -57,7 +60,6 @@ namespace BusinessLayer
 
 
         }
-
         public List<Student> LaidColl()
         {
             return this.studentRepository.GetStudent().Where(s => s.Colloquium >= 10).ToList();
