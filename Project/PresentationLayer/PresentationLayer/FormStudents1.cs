@@ -10,7 +10,7 @@ namespace PresentationLayer
     public partial class FormStudents1 : Form
 
     {
-        public  readonly IStudentBusiness studentBusiness;
+        public readonly IStudentBusiness studentBusiness;
 
         public FormStudents1(IStudentBusiness _studentBusiness)
 

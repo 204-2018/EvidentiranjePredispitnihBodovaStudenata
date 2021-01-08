@@ -338,7 +338,7 @@ namespace PresentationLayer
             // 
             this.buttonView.BackColor = System.Drawing.Color.LightSeaGreen;
             this.buttonView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonView.Location = new System.Drawing.Point(99, 603);
+            this.buttonView.Location = new System.Drawing.Point(104, 600);
             this.buttonView.Name = "buttonView";
             this.buttonView.Size = new System.Drawing.Size(209, 38);
             this.buttonView.TabIndex = 31;
