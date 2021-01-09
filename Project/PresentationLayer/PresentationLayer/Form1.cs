@@ -54,5 +54,10 @@ namespace PresentationLayer
 
             }
         }
+
+        private void textBoxUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
