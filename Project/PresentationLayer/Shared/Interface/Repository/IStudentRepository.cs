@@ -13,9 +13,5 @@ namespace Shared.Interface.Repository
         int Insert(Student s);
         int Update(Student s);
         int Delete1(int id);
-
-
-
-
     }
 }

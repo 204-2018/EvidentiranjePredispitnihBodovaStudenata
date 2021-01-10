@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class StudentBusiness : IBusinessRepository
+    public class StudentBusiness : IStudentBusiness
     {
 
         public readonly IStudentRepository studentRepository;
@@ -19,6 +19,8 @@ namespace BusinessLayer
         {
             this.studentRepository = _studentRepository;
         }
+
+       
 
         public List<Student> GetStudents()
         {
@@ -58,7 +60,6 @@ namespace BusinessLayer
 
 
         }
-
         public List<Student> LaidColl()
         {
             return this.studentRepository.GetStudent().Where(s => s.Colloquium >= 10).ToList();
