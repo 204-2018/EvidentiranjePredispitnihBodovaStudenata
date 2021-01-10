@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
-using DataAccessLayer.Models;
+using Shared.Interface.Business;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,13 +16,11 @@ namespace PresentationLayer
     public partial class FormStudents1 : Form
 
     {
-        public readonly StudentBusiness studentBusiness;
+        public readonly IBusinessRepository studentBusiness;
 
-        public FormStudents1()
-
-        {
-            this.WindowState = FormWindowState.Maximized;
-            this.studentBusiness = new StudentBusiness();
+        public FormStudents1(IBusinessRepository _studentBusiness)
+        { 
+            this.studentBusiness = _studentBusiness;
             InitializeComponent();
         }
 
@@ -137,10 +136,7 @@ namespace PresentationLayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            FormStudents1 formStudents1 = new FormStudents1();
-            formStudents1.Close();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
