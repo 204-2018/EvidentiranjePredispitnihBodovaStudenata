@@ -1,5 +1,5 @@
-﻿using DataAccessLayer.Models;
-using Shared.Interface.Repository;
+﻿using Shared.Interface.Repository;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -37,7 +37,7 @@ namespace DataAccessLayer
             return students;
             }
 
-        }
+       
 
         public int Insert(Student s)
         {
@@ -57,15 +57,10 @@ namespace DataAccessLayer
             }
         public int Delete1(int id)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "DELETE FROM Students WHERE Id='" + id + "'";
+            var result = DBConnection.EditData("DELETE FROM Students WHERE Id='" + id + "'");
 
-                int result = sqlCommand.ExecuteNonQuery();
-                return result;
+            DBConnection.CloseConnection();
+            return result;
             }
         }
 

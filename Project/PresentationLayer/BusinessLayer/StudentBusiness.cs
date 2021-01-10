@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
-using DataAccessLayer.Models;
 using Shared.Interface.Business;
+using Shared.Interface.Repository;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace BusinessLayer
     public class StudentBusiness : IBusinessRepository
     {
 
-        public readonly StudentRepository studentRepository;
+        public readonly IStudentRepository studentRepository;
 
         public StudentBusiness(IStudentRepository _studentRepository)
         {
