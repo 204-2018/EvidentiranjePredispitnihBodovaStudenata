@@ -183,10 +183,10 @@ namespace PresentationLayer
             // 
             this.textBoxUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUserName.Location = new System.Drawing.Point(319, 256);
+            this.textBoxUserName.Location = new System.Drawing.Point(319, 254);
             this.textBoxUserName.Multiline = true;
             this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(197, 35);
+            this.textBoxUserName.Size = new System.Drawing.Size(197, 39);
             this.textBoxUserName.TabIndex = 3;
             this.textBoxUserName.TextChanged += new System.EventHandler(this.textBoxUserName_TextChanged);
             // 
