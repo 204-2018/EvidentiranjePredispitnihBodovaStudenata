@@ -1,5 +1,4 @@
-﻿using Shared.Interface.Business;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +13,6 @@ namespace PresentationLayer
 
     public partial class Form1 : Form
     {
-        public readonly IBusinessRepository studentBusiness;
         public Form1()
         {
             InitializeComponent();
@@ -54,7 +52,7 @@ namespace PresentationLayer
                 (userName == "admin3" && pass == "password3"))
             {
                 MessageBox.Show("Success");
-                FormStudents1 formStudents1 = new FormStudents1(studentBusiness);
+                FormStudents1 formStudents1 = new FormStudents1();
                 formStudents1.Show();
             }
             else
@@ -79,6 +77,11 @@ namespace PresentationLayer
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

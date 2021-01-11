@@ -630,9 +630,9 @@ namespace PresentationLayer
             this.buttonView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonView.Location = new System.Drawing.Point(149, 14);
+            this.buttonView.Location = new System.Drawing.Point(149, 18);
             this.buttonView.Name = "buttonView";
-            this.buttonView.Size = new System.Drawing.Size(173, 52);
+            this.buttonView.Size = new System.Drawing.Size(173, 43);
             this.buttonView.TabIndex = 0;
             this.buttonView.Text = "VIEW";
             this.buttonView.UseVisualStyleBackColor = false;
@@ -659,9 +659,9 @@ namespace PresentationLayer
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Lime;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(148, 14);
+            this.button2.Location = new System.Drawing.Point(148, 19);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 52);
+            this.button2.Size = new System.Drawing.Size(172, 43);
             this.button2.TabIndex = 0;
             this.button2.Text = "UNDO";
             this.button2.UseVisualStyleBackColor = false;
@@ -704,9 +704,9 @@ namespace PresentationLayer
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(265, 7);
+            this.buttonExit.Location = new System.Drawing.Point(265, 13);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(183, 50);
+            this.buttonExit.Size = new System.Drawing.Size(183, 39);
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;

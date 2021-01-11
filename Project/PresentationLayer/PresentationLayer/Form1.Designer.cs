@@ -129,10 +129,10 @@ namespace PresentationLayer
             this.tableLayoutPanel2.Controls.Add(this.labelUserName, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelPassword, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.textBoxUserName, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBoxPassword, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.checkBoxHide, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.buttonExit, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.buttonLogin, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxPassword, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -149,6 +149,7 @@ namespace PresentationLayer
             // 
             this.labelLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.Gainsboro;
             this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogin.Location = new System.Drawing.Point(319, 87);
             this.labelLogin.Name = "labelLogin";
@@ -183,10 +184,10 @@ namespace PresentationLayer
             // 
             this.textBoxUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUserName.Location = new System.Drawing.Point(319, 254);
+            this.textBoxUserName.Location = new System.Drawing.Point(319, 256);
             this.textBoxUserName.Multiline = true;
             this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(197, 39);
+            this.textBoxUserName.Size = new System.Drawing.Size(197, 35);
             this.textBoxUserName.TabIndex = 3;
             this.textBoxUserName.TextChanged += new System.EventHandler(this.textBoxUserName_TextChanged);
             // 
@@ -194,11 +195,11 @@ namespace PresentationLayer
             // 
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(319, 364);
+            this.textBoxPassword.Location = new System.Drawing.Point(319, 365);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(197, 37);
+            this.textBoxPassword.Size = new System.Drawing.Size(197, 34);
             this.textBoxPassword.TabIndex = 4;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -218,11 +219,11 @@ namespace PresentationLayer
             // buttonExit
             // 
             this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(168, 512);
+            this.buttonExit.Location = new System.Drawing.Point(138, 517);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(145, 59);
+            this.buttonExit.Size = new System.Drawing.Size(175, 48);
             this.buttonExit.TabIndex = 6;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -231,11 +232,11 @@ namespace PresentationLayer
             // buttonLogin
             // 
             this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(379, 512);
+            this.buttonLogin.Location = new System.Drawing.Point(336, 519);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(137, 59);
+            this.buttonLogin.Size = new System.Drawing.Size(180, 45);
             this.buttonLogin.TabIndex = 7;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -250,6 +251,7 @@ namespace PresentationLayer
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

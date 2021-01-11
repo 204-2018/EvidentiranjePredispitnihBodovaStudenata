@@ -1,6 +1,5 @@
 ﻿using BusinessLayer;
-using Shared.Interface.Business;
-using Shared.Models;
+using DataAccessLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +15,11 @@ namespace PresentationLayer
     public partial class FormStudents1 : Form
 
     {
-        public readonly IBusinessRepository studentBusiness;
+        public readonly StudentBusiness studentBusiness;
 
-        public FormStudents1(IBusinessRepository _studentBusiness)
+        public FormStudents1()
         { 
-            this.studentBusiness = _studentBusiness;
+            this.studentBusiness = new StudentBusiness();
             InitializeComponent();
         }
 
@@ -125,11 +124,11 @@ namespace PresentationLayer
             {
                 dataGridView1.DataSource = s;
                 RefreshData();
-                MessageBox.Show("Uspesno unet podatak!");
+                MessageBox.Show("Successfully entered a new student !");
             }
             else
             {
-                MessageBox.Show("Greska, pokusajte ponovo!");
+                MessageBox.Show("Erroe, try again!");
             }
         }
 
@@ -138,12 +137,12 @@ namespace PresentationLayer
             Student s = new Student();
             if (this.studentBusiness.UpdateStudent(s))
             {
-                MessageBox.Show("Uspesno ste izmenili podatak studenta!");
+                MessageBox.Show("Successfully changed student data!");
                 RefreshData();
             }
             else
             {
-                MessageBox.Show("Neuspesno, pokusajte ponovo!");
+                MessageBox.Show("Unsuccessfully, try again!");
             }
         }
 
@@ -160,12 +159,12 @@ namespace PresentationLayer
 
             if (this.studentBusiness.DeleteStudent1(id))
             {
-                MessageBox.Show("Uspesno ste obrisali studenta!");
+                MessageBox.Show("Successfullu deleted student!");
                 RefreshData();
             }
             else
             {
-                MessageBox.Show("Neuspesno, pokusajte ponovo!");
+                MessageBox.Show("Unsuccessfully, try again!");
             }
         }
 
@@ -187,7 +186,7 @@ namespace PresentationLayer
 
             foreach (Student s in students)
             {
-                listBoxLaidColl.Items.Add(s.Name + "  " + s.Surname + "  " + s.IndexNumber + " -  " + s.Colloquium + " bodova");
+                listBoxLaidColl.Items.Add(s.Name + "      " + s.Surname + "      " + s.IndexNumber + "   -     " + s.Colloquium + "    points");
             }
         }
     }
