@@ -1,16 +1,14 @@
-﻿using Shared.Interface.Repository;
-using System;
-using Shared.Interface;
+﻿
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Shared.Models;
+using DataAccessLayer.Models;
 
 namespace DataAccessLayer
 {
-    public class StudentRepository : IStudentRepository
+    public class StudentRepository
     {
 
 
@@ -41,58 +39,53 @@ namespace DataAccessLayer
                     students.Add(s);
                 }
                 return students;
-        }
+            }
 
+       
         public int Insert(Student s)
-        {
-                public int Insert(Student s)
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
                 {
-                    using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+                    sqlConnection.Open();
+                    SqlCommand sqlCommand = new SqlCommand();
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = (string.Format("INSERT INTO Students VALUES ({0},'{1}','{2}','{3}',{4},{5},{6},{7})", s.Id, s.Name, s.Surname, s.IndexNumber, s.Colloquium,
+                    s.SeminaryWork, s.Homework, s.Activity));
+
+                    int result = sqlCommand.ExecuteNonQuery();
+                    return result;
+                }
+            }
+
+        public int Update(Student s)
                     {
-                        sqlConnection.Open();
-                        SqlCommand sqlCommand = new SqlCommand();
-                        sqlCommand.Connection = sqlConnection;
-                        sqlCommand.CommandText = (string.Format("INSERT INTO Students VALUES ({0},'{1}','{2}','{3}',{4},{5},{6},{7})", s.Id, s.Name, s.Surname, s.IndexNumber, s.Colloquium,
-                        s.SeminaryWork, s.Homework, s.Activity));
-
-                        int result = sqlCommand.ExecuteNonQuery();
-                        return result;
-                    }
-        
-
-            public int Update(Student s)
-        {
 
                         using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
                         {
                             sqlConnection.Open();
                             SqlCommand sqlCommand = new SqlCommand();
                             sqlCommand.Connection = sqlConnection;
-                            sqlCommand.CommandText =("UPDATE Students  SET SeminaryWork=20 WHERE Id LIKE 26");
+                            sqlCommand.CommandText = "UPDATE Students SET SeminaryWork=20 WHERE Id LIKE 26";
                             int result = sqlCommand.ExecuteNonQuery();
                             return result;
                         }
                     }
 
 
-
-
-
-
-                    public int Delete1(int id)
-        {
+            public int Delete1(int id)
+                    {
                         using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
                         {
                             sqlConnection.Open();
                             SqlCommand sqlCommand = new SqlCommand();
                             sqlCommand.Connection = sqlConnection;
-                            sqlCommand.CommandText = "DELETE FROM Students WHERE Id=idNew";
+                            sqlCommand.CommandText = "DELETE FROM Students WHERE Id='" + id + "'";
 
                             int result = sqlCommand.ExecuteNonQuery();
                             return result;
                         }
                     }
-    }
+                }
 
-        
-    }
+            
+        } }
