@@ -21,23 +21,9 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(Form1);
 
 
-            var services = new ServiceCollection();
-            ConfigureServices(services);
-
-            using (ServiceProvider serviceProvider = services.BuildServiceProvider())
-            {
-                var form1 = serviceProvider.GetRequiredService<Form1>();
-                Application.Run(form1);
-            }
-        }
-
-        private static void ConfigureServices(ServiceCollection services)
-        {
-            services.AddSingleton<IStudentRepository, StudentRepository>();
-            services.AddScoped<IBusinessRepository, StudentBusiness>();
-            services.AddScoped<Form1>();
         }
     }
 
