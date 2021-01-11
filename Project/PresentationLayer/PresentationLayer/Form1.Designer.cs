@@ -143,6 +143,7 @@ namespace PresentationLayer
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.04332F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(702, 649);
             this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // labelLogin
             // 
