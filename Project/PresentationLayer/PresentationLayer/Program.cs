@@ -1,4 +1,9 @@
-﻿using System;
+﻿using BusinessLayer;
+using DataAccessLayer;
+using Microsoft.Extensions.DependencyInjection;
+using Shared.Interface.Business;
+using Shared.Interface.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +21,24 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+
+            using (ServiceProvider serviceProvider = services.BuildServiceProvider())
+            {
+                var form1 = serviceProvider.GetRequiredService<Form1>();
+                Application.Run(form1);
+            }
+        }
+
+        private static void ConfigureServices(ServiceCollection services)
+        {
+            services.AddSingleton<IStudentRepository, StudentRepository>();
+            services.AddScoped<IBusinessRepository, StudentBusiness>();
+            services.AddScoped<Form1>();
         }
     }
+
 }
