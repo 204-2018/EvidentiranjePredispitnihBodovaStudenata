@@ -1,7 +1,5 @@
 ﻿using DataAccessLayer;
-using Shared.Interface.Business;
-using Shared.Interface.Repository;
-using Shared.Models;
+using DataAccessLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class StudentBusiness : IBusinessRepository
+    public class StudentBusiness
     {
 
-        public readonly IStudentRepository studentRepository;
+        public readonly StudentRepository studentRepository;
 
-        public StudentBusiness(IStudentRepository _studentRepository)
+        public StudentBusiness()
         {
-            this.studentRepository = _studentRepository;
+            this.studentRepository = new StudentRepository();
         }
 
         public List<Student> GetStudents()
