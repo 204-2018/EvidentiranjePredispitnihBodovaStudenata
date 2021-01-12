@@ -41,5 +41,15 @@ namespace PresentationLayer
         {
 
         }
+
+        private void listBoxSeminary_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExit1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
