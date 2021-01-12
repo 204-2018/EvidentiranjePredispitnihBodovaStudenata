@@ -44,7 +44,7 @@ namespace PresentationLayer
 
             foreach (Student s in students)
             {
-              dataGridView1.DataSource = students;
+              dataGridViewColl.DataSource = students;
                     
             }
 
@@ -109,20 +109,20 @@ namespace PresentationLayer
         private void buttonInsert_Click_1(object sender, EventArgs e)
         {
             Student s = new Student();
-            s.Id = Convert.ToInt32(textBox1.Text);
-            s.Name = textBox2.Text;
-            s.Surname = textBox3.Text;
-            s.IndexNumber = textBox4.Text;
-            s.Colloquium = Convert.ToInt32(textBox5.Text);
-            s.SeminaryWork = Convert.ToInt32(textBox6.Text);
-            s.Homework = Convert.ToInt32(textBox7.Text);
-            s.Activity = Convert.ToInt32(textBox8.Text);
+            s.Id = Convert.ToInt32(textBoxId.Text);
+            s.Name = textBoxName.Text;
+            s.Surname = textBoxSurname.Text;
+            s.IndexNumber = textBoxIndexNumber.Text;
+            s.Colloquium = Convert.ToInt32(textBoxColl.Text);
+            s.SeminaryWork = Convert.ToInt32(textBoxSWork.Text);
+            s.Homework = Convert.ToInt32(textBoxHomework.Text);
+            s.Activity = Convert.ToInt32(textBoxActivity.Text);
 
 
 
             if (this.studentBusiness.InsertStudent(s))
             {
-                dataGridView1.DataSource = s;
+                dataGridViewColl.DataSource = s;
                 RefreshData();
                 MessageBox.Show("Successfully entered a new student !");
             }
