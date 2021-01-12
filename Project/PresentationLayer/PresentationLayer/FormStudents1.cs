@@ -175,7 +175,7 @@ namespace PresentationLayer
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Login form1 = new Login();
             form1.Show();
             this.Close();
         }
@@ -192,7 +192,7 @@ namespace PresentationLayer
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            FormSeminary form2 = new FormSeminary();
             form2.Show();
         }
     }

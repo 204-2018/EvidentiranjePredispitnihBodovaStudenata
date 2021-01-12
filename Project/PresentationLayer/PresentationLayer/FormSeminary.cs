@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class Form2 : Form
+    public partial class FormSeminary : Form
     {
         public readonly StudentBusiness studentBusiness;
 
-        public Form2()
+        public FormSeminary()
         {
             this.studentBusiness = new StudentBusiness();
             InitializeComponent();
