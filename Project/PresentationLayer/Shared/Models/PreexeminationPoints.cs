@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Models
 {
-    public class Student
+   public class PreexeminationPoints
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string IndexNumber { get; set; }
         public int Colloquium { get; set; }
         public int SeminaryWork { get; set; }
         public int Homework { get; set; }

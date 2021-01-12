@@ -39,7 +39,7 @@ namespace DataAccessLayer
 
         }
 
-        public int Insert(PreexeminationPoints p)
+        public int InsertPoint(PreexeminationPoints p)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
@@ -54,7 +54,7 @@ namespace DataAccessLayer
         }
 
 
-        public int Update(PreexeminationPoints p)
+        public int UpdatePoint(PreexeminationPoints p)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
@@ -68,22 +68,7 @@ namespace DataAccessLayer
             }
         }
 
-        public int Delete(PreexeminationPoints p)
-        {
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "DELETE FROM Points WHERE Id=1";
-
-                int result = sqlCommand.ExecuteNonQuery();
-                return result;
-            }
-        }
-
-
-        public int Delete1(PreexeminationPoints p, int idNew)
+        public int DeletePoint1(PreexeminationPoints p, int idNew)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {

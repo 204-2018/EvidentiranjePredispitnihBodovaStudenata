@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -19,6 +20,31 @@ namespace PresentationLayer
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void buttonLogin_Click_1(object sender, EventArgs e)
+        {
+
             string userName, pass;
             userName = textBoxUserName.Text;
             pass = textBoxPassword.Text;
@@ -26,6 +52,8 @@ namespace PresentationLayer
                 (userName == "admin3" && pass == "password3"))
             {
                 MessageBox.Show("Success");
+                FormStudents1 formStudents1 = new FormStudents1();
+                formStudents1.Show();
             }
             else
             {
@@ -34,23 +62,28 @@ namespace PresentationLayer
             }
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void checkBoxHide_CheckedChanged_1(object sender, EventArgs e)
         {
-            this.Close();
 
-        }
-
-        private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
-        {
             if (checkBoxHide.Checked)
             {
-                textBoxPassword.UseSystemPasswordChar = true;
+                textBoxPassword.UseSystemPasswordChar = false;
             }
             else
             {
-                textBoxPassword.UseSystemPasswordChar = false;
+                textBoxPassword.UseSystemPasswordChar = true;
 
             }
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
