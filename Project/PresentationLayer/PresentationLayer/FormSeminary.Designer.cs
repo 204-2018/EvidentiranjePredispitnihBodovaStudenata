@@ -1,7 +1,7 @@
 ﻿
 namespace PresentationLayer
 {
-    partial class Form2
+    partial class FormSeminary
     {
         /// <summary>
         /// Required designer variable.
@@ -190,14 +190,14 @@ namespace PresentationLayer
             this.listBoxSeminary.TabIndex = 1;
             this.listBoxSeminary.SelectedIndexChanged += new System.EventHandler(this.listBoxSeminary_SelectedIndexChanged);
             // 
-            // Form2
+            // FormSeminary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "FormSeminary";
+            this.Text = "FormSeminary";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
