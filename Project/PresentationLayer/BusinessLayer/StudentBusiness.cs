@@ -61,5 +61,9 @@ namespace BusinessLayer
         {
             return this.studentRepository.GetStudent().Where(s => s.Colloquium >= 10).ToList();
         }
+        public List<Student> Seminary()
+        {
+            return this.studentRepository.GetStudent().Where(s => s.SeminaryWork >= 10).ToList();
+        }
     }
 }

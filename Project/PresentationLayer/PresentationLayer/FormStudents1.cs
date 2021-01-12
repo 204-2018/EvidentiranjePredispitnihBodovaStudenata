@@ -189,5 +189,11 @@ namespace PresentationLayer
                 listBoxLaidColl.Items.Add(s.Name + "      " + s.Surname + "      " + s.IndexNumber + "   -     " + s.Colloquium + "    points");
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
     }
     }
