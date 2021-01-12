@@ -63,7 +63,7 @@ namespace BusinessLayer
         }
         public List<Student> Seminary()
         {
-            return this.studentRepository.GetStudent().Where(s => s.SeminaryWork >= 10).ToList();
+            return this.studentRepository.GetStudent().Where(s => s.SeminaryWork <= 10).ToList();
         }
     }
 }

@@ -186,7 +186,7 @@ namespace PresentationLayer
 
             foreach (Student s in students)
             {
-                listBoxLaidColl.Items.Add(s.Name + "      " + s.Surname + "      " + s.IndexNumber + "   -     " + s.Colloquium + "    points");
+                listBoxLaidColl.Items.Add(s.Name + "    " + s.Surname + "   " + s.IndexNumber + "   -  " + s.Colloquium + "  points");
             }
         }
 

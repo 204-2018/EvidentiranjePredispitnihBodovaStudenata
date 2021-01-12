@@ -796,7 +796,9 @@ namespace PresentationLayer
             // 
             this.listBoxLaidColl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.listBoxLaidColl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxLaidColl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxLaidColl.FormattingEnabled = true;
+            this.listBoxLaidColl.ItemHeight = 24;
             this.listBoxLaidColl.Location = new System.Drawing.Point(29, 29);
             this.listBoxLaidColl.Name = "listBoxLaidColl";
             this.listBoxLaidColl.Size = new System.Drawing.Size(418, 198);
