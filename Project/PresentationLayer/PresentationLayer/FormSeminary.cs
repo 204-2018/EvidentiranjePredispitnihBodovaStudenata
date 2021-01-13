@@ -21,12 +21,6 @@ namespace PresentationLayer
             this.studentBusiness = new StudentBusiness();
             InitializeComponent();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             List<Student> students = this.studentBusiness.Seminary();
@@ -35,6 +29,10 @@ namespace PresentationLayer
             {
                 listBoxSeminary.Items.Add(s.Name + "      " + s.Surname + "      " + s.IndexNumber + "   -     " + s.SeminaryWork + "    points");
             }
+        }
+        private void buttonExit1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
@@ -46,10 +44,10 @@ namespace PresentationLayer
         {
 
         }
-
-        private void buttonExit1_Click(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            this.Close();
+
         }
+
     }
 }

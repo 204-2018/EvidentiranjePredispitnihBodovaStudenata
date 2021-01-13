@@ -22,17 +22,6 @@ namespace PresentationLayer
             this.studentBusiness = new StudentBusiness();
             InitializeComponent();
         }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelColloquim_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormStudents1_Load(object sender, EventArgs e)
         {
             RefreshData();
@@ -49,63 +38,6 @@ namespace PresentationLayer
             }
 
         }
-           
-
-        private void buttonShow_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonUpdate_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void buttonInsert_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void listBoxLaidColl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonView_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void tableLayoutPanel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonInsert_Click_1(object sender, EventArgs e)
         {
             Student s = new Student();
@@ -194,6 +126,72 @@ namespace PresentationLayer
         {
             FormSeminary form2 = new FormSeminary();
             form2.Show();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void buttonShow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void buttonInsert_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void listBoxLaidColl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tableLayoutPanel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelColloquim_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

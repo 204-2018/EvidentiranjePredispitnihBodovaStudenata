@@ -18,24 +18,6 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBoxUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -54,6 +36,9 @@ namespace PresentationLayer
                 MessageBox.Show("Success");
                 FormStudents1 formStudents1 = new FormStudents1();
                 formStudents1.Show();
+                textBoxUserName.Text = "";
+                textBoxPassword.Text = "";
+
             }
             else
             {
@@ -74,6 +59,23 @@ namespace PresentationLayer
                 textBoxPassword.UseSystemPasswordChar = true;
 
             }
+        }
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxUserName_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
