@@ -1,0 +1,9 @@
+Table Pre-exemination Points:
+CREATE TABLE [dbo].[PreexeminationPoints]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Colloquium] INT NULL, 
+    [SeminaryWord] INT NULL, 
+    [Homework] INT NULL, 
+    [Activity] INT NULL
+)
